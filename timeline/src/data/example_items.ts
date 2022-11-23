@@ -6,7 +6,7 @@ const data_img = 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABSCAYAAAD
 export const example_items = [{
     item: {
         name: 'Dodanie na giełdę nasdaq',
-        image: data_img,
+        image: "http://91.227.64.92/simple-timeline-main/img/prototype2.jpg",
         type: 1,
         short_description: "To był piękny dzień. Słońce świeciło.",
         long_description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
@@ -47,22 +47,3 @@ export const example_items = [{
     }
 }]
 
-// export const example_items2: Array<Item> = [{
-//     name: 'string',
-//     image: data_img,
-//     type: 1,
-//     short_description: 'short desc',
-//     long_description: 'long desc',
-//     start_date: new Date(),
-//     end_date: new Date(),
-// },
-// {
-//     name: 'string2',
-//     image: data_img,
-//     type: 1,
-//     short_description: 'short desc2',
-//     long_description: 'long desc2',
-//     start_date: new Date(),
-//     end_date: new Date(),
-// }
-// ]
