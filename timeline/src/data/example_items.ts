@@ -5,19 +5,18 @@ const data_img = 'data:image/jpeg;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABSCAYAAAD
 
 export const example_items = [{
     item: {
-        name: 'string',
+        name: 'Dodanie na giełdę nasdaq',
         image: data_img,
         type: 1,
-        short_description: 'short desc',
-        long_description: 'long desc',
-        start_date: 'date1',
-        end_date: 'date2',
+        short_description: "To był piękny dzień. Słońce świeciło.",
+        long_description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        start_date: '1992-11-04',
+        end_date: '1994-04-07',
     },
-    title: "May 1940",
-    cardTitle: "Dunkirk",
-    // url: "http://www.history.com",
-    cardSubtitle: "Men of the British Expeditionary Force (BEF) wade out to..",
-    cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..Men of the British Expeditionary Force (BEF) wade out to..Men of the British Expeditionary Force (BEF) wade out to..Men of the British Expeditionary Force (BEF) wade out to..Men of the British Expeditionary Force (BEF) wade out to..Men of the British Expeditionary Force (BEF) wade out to..",
+    title: "1992-11-04 - 1994-04-07",
+    cardTitle: 'Dodanie na nasdaq',
+    cardSubtitle: "To był piękny dzień. Słońce świeciło.",
+    cardDetailedText: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
     media: {
         type: "IMAGE" as MediaType,
         source: {
@@ -27,19 +26,19 @@ export const example_items = [{
 },
 {
     item: {
-        name: 'string2',
+        name: 'Magazyn w płomieniach',
         image: data_img,
         type: 1,
-        short_description: 'short desc2',
-        long_description: 'long desc2',
-        start_date: 'date1',
-        end_date: 'date2',
+        short_description: 'Wielki pożar, cały magazyn stanął w płomieniach',
+        long_description: 'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using',
+        start_date: '1996-11-04',
+        end_date: '1999-04-07',
     },
-    title: "May 1941 - September 1943",
-    cardTitle: "Dunkirk",
+    title: '1996-11-04 - 1999-04-07',
+    cardTitle: 'Magazyn w płomieniach',
     // url: "http://www.history.com",
-    cardSubtitle: "Men of the British Expeditionary Force (BEF) wade out to..",
-    cardDetailedText: "Men of the British Expeditionary Force (BEF) wade out to..",
+    cardSubtitle: 'Wielki pożar, cały magazyn stanął w płomieniach',
+    cardDetailedText: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using",
     media: {
         type: "IMAGE" as MediaType,
         source: {

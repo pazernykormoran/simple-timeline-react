@@ -3,6 +3,11 @@ import React from 'react';
 import { Item } from '../interfaces/item_interface';
 import { FormControl, InputLabel, Input, FormHelperText } from '@mui/material';
 import { MediaType } from 'react-chrono/dist/models/TimelineMediaModel';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+
 
 export interface tableInterface {
     items: Array<any>
@@ -25,7 +30,6 @@ const AddingForm: React.FC<tableInterface> = ({ items, addItem }) => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        console.log(event.target.files)
         const new_item: Item = {
             name: form_state.name,
             image: form_state.image,
@@ -35,7 +39,6 @@ const AddingForm: React.FC<tableInterface> = ({ items, addItem }) => {
             start_date: form_state.start_date,
             end_date: form_state.end_date
         }
-        console.log('new_item', new_item)
         addItem(new_item)
     }
     const handleFileInput = (e) => {
@@ -57,66 +60,84 @@ const AddingForm: React.FC<tableInterface> = ({ items, addItem }) => {
             form_state.image = fileInfo.base64 as string
             // allFiles.push(fileInfo);
         }
-        console.log('form_state', form_state)
+        // console.log('form_state', form_state)
     }
 
     const onChangeName = (e) => {
         form_state.name = e.target.value
-        console.log('form_state', form_state)
+        // console.log('form_state', form_state)
 
     }
 
     const onChangeType = (e) => {
         form_state.type = e.target.value
-        console.log('form_state', form_state)
+        // console.log('form_state', form_state)
 
     }
 
     const onChangeShortDescription = (e) => {
         form_state.short_description = e.target.value
-        console.log('form_state', form_state)
+        // console.log('form_state', form_state)
 
     }
     const onChangeLongDescription = (e) => {
         form_state.long_description = e.target.value
-        console.log('form_state', form_state)
+        // console.log('form_state', form_state)
 
     }
     const onChangeStartDate = (e) => {
         form_state.start_date = e.target.value
-        console.log('form_state', form_state)
+        // console.log('form_state', form_state)
 
     }
     const onChangeEndDate = (e) => {
         form_state.end_date = e.target.value
-        console.log('form_state', form_state)
+        // console.log('form_state', form_state)
     }
 
     return (
-        <div>siema
-            <form onSubmit={handleSubmit}>
-                file:
-                <input type="file" onChange={handleFileInput} style={{ display: "block", margin: "5px" }} />
-                name:
-                <input type="text" onChange={onChangeName} style={{ display: "block", margin: "5px" }} />
-                type:
-                <input type="number" onChange={onChangeType} style={{ display: "block", margin: "5px" }} />
-                short description:
-                <input type="text" onChange={onChangeShortDescription} style={{ display: "block", margin: "5px" }} />
-                long description:
-                <input type="text" onChange={onChangeLongDescription} style={{ display: "block", margin: "5px" }} />
-                start date:
-                <input type="date" onChange={onChangeStartDate} style={{ display: "block", margin: "5px" }} />
-                end date:
-                <input type="date" onChange={onChangeEndDate} style={{ display: "block", margin: "5px" }} />
-                submit:
-                <input type="submit" value="Submit" style={{ display: "block", margin: "5px" }} />
-            </form>
-            {/* <FormControl style={{ display: "block" }}>
-                <InputLabel htmlFor="my-input">Email address</InputLabel>
-                <Input id="my-input" aria-describedby="my-helper-text" />
-                <FormHelperText id="my-helper-text">Provide event name</FormHelperText>
-            </FormControl>
+        <div style={{ margin: "50px" }}>
+
+            <Card sx={{ minWidth: 200 }}>
+                <CardContent>
+
+                    <p>ADD EVENT</p>
+                    <FormControl style={{ display: "block", margin: "20px" }}>
+                        <InputLabel htmlFor="my-input">Nazwa wydarzenia</InputLabel>
+                        <Input onChange={onChangeName} id="my-input" aria-describedby="my-helper-text" />
+                    </FormControl>
+
+                    <FormControl style={{ display: "block", margin: "20px" }}>
+                        <InputLabel htmlFor="my-input">Krotki opis wydarzenia</InputLabel>
+                        <Input onChange={onChangeShortDescription} id="my-input" aria-describedby="my-helper-text" />
+                    </FormControl>
+                    <FormControl style={{ display: "block", margin: "20px" }}>
+                        <InputLabel htmlFor="my-input">Długi opis wydarzenia</InputLabel>
+                        <Input onChange={onChangeLongDescription} id="my-input" aria-describedby="my-helper-text" />
+                    </FormControl>
+
+                    <p>Wybierz plik z obrazkiem:</p>
+                    <input type="file" onChange={handleFileInput} style={{ display: "block", margin: "5px" }} />
+                    <p>Wybierz datę rozpoczęcia wydarzenia:</p>
+                    <input type="date" onChange={onChangeStartDate} style={{ display: "block", margin: "5px" }} />
+                    <p>Wybierz datę zakończenia wydarzenia:</p>
+                    <input type="date" onChange={onChangeEndDate} style={{ display: "block", margin: "5px" }} />
+                    <p>Wybierz typ wydarzenia:</p>
+                    <input type="number" list="types" onChange={onChangeType} style={{ display: "block", margin: "5px" }} />
+                    <datalist id="types">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </datalist>
+
+
+                    <Button variant="contained" style={{ display: "block", margin: "50px" }} onClick={handleSubmit} >Dodaj wydarzenie</Button>
+                </CardContent>
+
+            </Card>
+            <p></p>
+
+            {/* 
             <FormControl style={{ display: "block" }}>
                 <InputLabel htmlFor="my-input">Email address</InputLabel>
                 <Input id="my-input" aria-describedby="my-helper-text" />
